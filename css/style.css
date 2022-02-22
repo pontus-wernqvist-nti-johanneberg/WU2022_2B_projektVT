@@ -1,0 +1,71 @@
+/* ----- SAMMA ÖVERALLT ----- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headernavwrapper {
+    display: grid;
+    grid-area: hn;
+    background-color: rgb(112, 146, 190);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 20px;
+    grid-template-areas:
+    "he nl"
+    "da sl";
+}
+
+.headernavwrapper header {
+    grid-area: he;
+}
+
+.site_navigation_links {
+    grid-area: nl;
+
+}
+
+.dates {
+    grid-area: da;
+    background: rgb(0, 255, 0);
+}
+
+.site_social_links {
+    grid-area: sl;
+    background: rgb(0, 255, 0);
+}
+
+/* ----- INDEX (STARTSIDA) ----- */
+#gridwrapperstartsida {
+    display: grid;
+    background: lightblue;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px minmax(400px, 4fr) minmax(250px, 3fr) 100px;
+    gap: 0px;   
+    grid-template-areas: 
+        "hn"
+        "hu"
+        "ny"
+        "fo";
+    width: 100vw;
+    min-height: 180vh;
+    height: auto;
+}
+
+#hpu {
+    grid-area: hu;
+    background: rgb(216, 0, 216);
+
+}
+
+#nyheter {
+    grid-area: ny;
+}
+
+footer {
+    grid-area: fo;
+    background: rgb(112, 146, 190);
+}
