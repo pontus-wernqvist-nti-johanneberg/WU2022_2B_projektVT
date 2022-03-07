@@ -15,17 +15,12 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 80px 20px;
     grid-template-areas:
-    "he nl"
+    "he un"
     "da sl";
 }
 
 .headernavwrapper header {
     grid-area: he;
-}
-
-.site_navigation_links {
-    grid-area: nl;
-
 }
 
 .dates {
@@ -37,6 +32,72 @@
     grid-area: sl;
     background: rgb(0, 255, 0);
 }
+
+.upper_nav {
+    grid-area: un;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background:rgb(112, 146, 190, 0.8);
+}
+
+
+.site_navigation_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background-color:rgb(112, 146, 190, 0.8);
+    position: absolute;
+    top: -100vh;
+    right: 0px;
+    width: 100vw;  
+    transition: all 1s;
+}
+
+.upper_nav-active {
+    transform: translateY(100vh);
+}
+
+.upper_nav li {
+    list-style: none;
+}
+
+.upper_nav a {
+    text-decoration: none;
+    letter-spacing: 0.1875rem;  
+    color: black;
+    font-weight: bold;
+    font-size: 3rem;    
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 10%;
+    transition: all 0.5s;
+}
+
+.toggle #line2 {
+    opacity: 0;
+}
+
+.toggle #line1 {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.toggle #line3 {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.burger {
+    margin-right: 3.125rem;    
+    cursor: pointer;
+}
+
 
 /* ----- INDEX (STARTSIDA) ----- */
 #gridwrapperstartsida {
@@ -57,7 +118,9 @@
 
 #hpu {
     grid-area: hu;
-    background: rgb(216, 0, 216);
+    background-image: url(../img/Main_background_black_placeholder.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
