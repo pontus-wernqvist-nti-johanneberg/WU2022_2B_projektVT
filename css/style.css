@@ -13,7 +13,7 @@
     grid-area: hn;
     background-color: rgb(112, 146, 190);
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 20px;
+    grid-template-rows: 80px 30px;
     grid-template-areas:
     "he un"
     "da sl";
@@ -25,11 +25,6 @@
 
 .dates {
     grid-area: da;
-    background: rgb(0, 255, 0);
-}
-
-.site_social_links {
-    grid-area: sl;
     background: rgb(0, 255, 0);
 }
 
@@ -98,13 +93,63 @@
     cursor: pointer;
 }
 
+.site_social_links {
+    grid-area: sl;
+    background: rgb(0, 255, 0);
+    display: flex;
+    align-items: center;
+    width: 100%
+}
+
+.site_social_links ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    right: 3.2rem;
+    width: 100%;
+}
+
+.site_social_links img {
+        height: 20px;
+        width: 20px;
+}
+
+
+footer {
+    grid-area: fo;
+    position: relative; 
+    background-color: rgb(112, 146, 190);
+}
+
+#footer_links {
+    position: absolute; 
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+footer img {
+    height: 80px;
+    width: 80px;
+}
+
+
 
 /* ----- INDEX (STARTSIDA) ----- */
 #gridwrapperstartsida {
     display: grid;
     background: lightblue;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px minmax(400px, 4fr) minmax(250px, 3fr) 100px;
+    grid-template-rows: 110px minmax(400px, 4fr) minmax(250px, 3fr) 100px;
     gap: 0px;   
     grid-template-areas: 
         "hn"
@@ -128,7 +173,3 @@
     grid-area: ny;
 }
 
-footer {
-    grid-area: fo;
-    background: rgb(112, 146, 190);
-}
