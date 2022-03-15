@@ -12,11 +12,15 @@
     display: grid;
     grid-area: hn;
     background-color: rgb(112, 146, 190);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50vw 50vw;
     grid-template-rows: 80px 30px;
     grid-template-areas:
     "he un"
     "da sl";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
 }
 
 .headernavwrapper header {
@@ -41,14 +45,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     height: 100vh;
-    background-color:rgb(112, 146, 190, 0.8);
+    background-color:rgb(112, 146, 190, 0.96);
     position: absolute;
     top: -100vh;
     right: 0px;
     width: 100vw;  
     transition: all 1s;
+    z-index: 10;
+
 }
 
 .upper_nav-active {
@@ -57,6 +62,8 @@
 
 .upper_nav li {
     list-style: none;
+    margin-top: 15vh;
+    padding-bottom: 5vh;    
 }
 
 .upper_nav a {
@@ -91,6 +98,7 @@
 .burger {
     margin-right: 3.125rem;    
     cursor: pointer;
+    z-index: 11;
 }
 
 .site_social_links {
@@ -149,7 +157,7 @@ footer img {
     display: grid;
     background: lightblue;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 4fr) minmax(250px, 3fr) 100px;
+    grid-template-rows: 110px minmax(400px, 90vh) minmax(250px, 100vh) 100px;
     gap: 0px;   
     grid-template-areas: 
         "hn"
@@ -157,19 +165,51 @@ footer img {
         "ny"
         "fo";
     width: 100vw;
-    min-height: 180vh;
-    height: auto;
 }
 
 #hpu {
     grid-area: hu;
-    background-image: url(../img/Main_background_black_placeholder.png);
+    background-image: url(../img/hpubackground2.jpg);
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
 
+#hpu_text {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 40vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px 5px #00000079;
+    border-radius: 8px;
+}
+
+#hpu_text h1 {
+    text-align: center;
+}
+
+#biljetter {
+    font-size: 2.125rem;
+}
+
+#titel {
+    font-size: 2.125rem;
 }
 
 #nyheter {
     grid-area: ny;
+    background-color: rgb(14, 14, 14);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
 }
 
