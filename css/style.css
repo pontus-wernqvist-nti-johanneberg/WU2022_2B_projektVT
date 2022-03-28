@@ -11,8 +11,8 @@
 .headernavwrapper {
     display: grid;
     grid-area: hn;
-    background-color: rgb(112, 146, 190);
     grid-template-columns: 50vw 50vw;
+    background-color:rgb(255, 255, 255);    
     grid-template-rows: 80px 30px;
     grid-template-areas:
     "he un"
@@ -25,11 +25,27 @@
 
 .headernavwrapper header {
     grid-area: he;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    background-color:rgb(255, 255, 255);
+}
+
+.logo {
+    height: 90%;
+    width: fit-content;
 }
 
 .dates {
     grid-area: da;
-    background: rgb(0, 255, 0);
+    background-color: rgba(25, 25, 98);
+    display: flex;
+    align-items: center;
+}
+
+.dates p {
+    color: white;
+    margin-left: 16px;
 }
 
 .upper_nav {
@@ -37,7 +53,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background:rgb(112, 146, 190, 0.8);
+    background-color:rgb(255, 255, 255);
 }
 
 
@@ -46,14 +62,13 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color:rgb(112, 146, 190, 0.96);
     position: absolute;
     top: -100vh;
     right: 0px;
     width: 100vw;  
     transition: all 1s;
     z-index: 10;
-
+    background-color: rgba(25, 25, 98, 0.95);
 }
 
 .upper_nav-active {
@@ -69,9 +84,9 @@
 .upper_nav a {
     text-decoration: none;
     letter-spacing: 0.1875rem;  
-    color: black;
+    color: white;
     font-weight: bold;
-    font-size: 3rem;    
+    font-size: 3.125rem;    
 }
 
 .burger div {
@@ -103,7 +118,7 @@
 
 .site_social_links {
     grid-area: sl;
-    background: rgb(0, 255, 0);
+    background-color: rgba(25, 25, 98);
     display: flex;
     align-items: center;
     width: 100%
@@ -121,8 +136,9 @@
 }
 
 .site_social_links img {
-        height: 20px;
-        width: 20px;
+    display: flex;
+    height: 18px;
+    width: fit-content;
 }
 
 
@@ -155,13 +171,17 @@ footer img {
 /* ----- INDEX (STARTSIDA) ----- */
 #gridwrapperstartsida {
     display: grid;
-    background: lightblue;
+    background-image: url(../img/gothenburg-gacb6dd552_1920.jpg);
+    background-position: center;
+    background-attachment: fixed;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 90vh) minmax(250px, 100vh) 100px;
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(200px, 30vh) minmax(200px, 30vh) minmax(300px, 80vh) 100px;
     gap: 0px;   
     grid-template-areas: 
         "hn"
         "hu"
+        "ut"
+        "mt"
         "ny"
         "fo";
     width: 100vw;
@@ -169,47 +189,157 @@ footer img {
 
 #hpu {
     grid-area: hu;
-    background-image: url(../img/hpubackground2.jpg);
+    background-image: url(../img/stage-concert-entertainment-rock-concert-crowd-light-1545341-pxhere.com.jpg);
     background-position: center;
-    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    color: white;
-    
+    background-size: cover;  
+
 }
 
 #hpu_text {
+    grid-area: ut;
+    position: relative;
     display: flex;
-    position: absolute;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 40vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 5px 5px #00000079;
-    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.0) 0%,
+        rgb(17, 17, 92) 100%
+    );
+    color: white;
 }
+
+#hpu_text header {
+    padding: 5%;
+
+ }
 
 #hpu_text h1 {
     text-align: center;
+    font-size: 3.4375rem;
+
 }
 
-#biljetter {
-    font-size: 2.125rem;
+#hpm_text {
+    grid-area: mt;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(17, 17, 92, 0.9);
+
 }
 
-#titel {
-    font-size: 2.125rem;
+#biljetter a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 3.4375rem;
+    border: 1rem solid white;
+    width: fit-content;
+    padding: 1rem;
+
+
 }
 
 #nyheter {
     grid-area: ny;
-    background-color: rgb(14, 14, 14);
+    background-color: rgba(14, 14, 14, 0.95);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;    
+    justify-content: top;    
+    padding: 10%;
 }
 
+#nyheter h2 {
+    text-align: center;
+    font-size: 3.4375rem;
+
+}
+
+#nyheter li {
+    font-size: 1.3125rem;
+    font-weight: bold;
+    line-height: 200%;
+
+}
+
+/* ----- ARTISTSIDA ----- */
+#gridwrapperprogram {
+    display: grid;
+    background: lightblue;
+    color: white;
+    grid-template-columns: 1fr;
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(400px, 85vh) minmax(400px, 85vh) 100px;
+    gap: 0px;   
+    grid-template-areas: 
+        "hn"
+        "d1"
+        "d2"
+        "d3"
+        "fo";
+    width: 100vw;
+}
+
+.dag {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.dag p {
+    font-size: 1rem;
+    width: 320px;
+}
+
+#dag_1 {
+    grid-area: d1;
+    background-color: rgb(14, 14, 14);
+}
+
+#dag_2 {
+    grid-area: d2;
+    background-color: darkgreen;
+}
+
+#dag_3 {
+    grid-area: d3;
+    background-color: rgb(14, 14, 14);
+}
+
+.dag figure {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+}
+
+.dag img{
+    overflow: hidden;
+    transition: all 0.2s;
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.dag img:hover {
+    transform: scale(1.2);
+
+}
+
+/* ----- HITTA HIT ----- */
+#map iframe {
+    width: 100vw;
+    height: 100vh;
+
+}
