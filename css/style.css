@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    max-width: 100%;
+    max-width: 100%;    
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -43,7 +43,7 @@
     align-items: center;
 }
 
-.dates p {
+.dates time {
     color: white;
     margin-left: 16px;
 }
@@ -111,7 +111,7 @@
 }
 
 .burger {
-    margin-right: 3.125rem;    
+    margin-right: 10%;    
     cursor: pointer;
     z-index: 11;
 }
@@ -131,7 +131,7 @@
     flex-direction: row;
     justify-content: flex-end;
     gap: 20px;
-    right: 3.2rem;
+    margin-right: 10%;
     width: 100%;
 }
 
@@ -166,6 +166,27 @@ footer img {
     width: 80px;
 }
 
+h1 {
+    font-size: 3.23rem;
+}
+
+h2 {
+    font-size: 3.4375rem;
+}
+
+h3 {
+
+}
+
+p {
+    font-size: 1rem;
+    width: 320px;
+}
+
+time {
+    font-size: 1rem;
+    color: white;
+}
 
 
 /* ----- INDEX (STARTSIDA) ----- */
@@ -210,17 +231,16 @@ footer img {
         rgb(17, 17, 92) 100%
     );
     color: white;
+    width: 100%;
 }
 
 #hpu_text header {
-    padding: 5%;
+    padding-top: 0;
 
  }
 
 #hpu_text h1 {
-    text-align: center;
-    font-size: 3.4375rem;
-
+    text-align: center;     
 }
 
 #hpm_text {
@@ -230,6 +250,7 @@ footer img {
     flex-direction: column;
     align-items: center;
     background-color: rgba(17, 17, 92, 0.9);
+    width: 100%;
 
 }
 
@@ -239,9 +260,8 @@ footer img {
     color: white;
     font-weight: bolder;
     font-size: 3.4375rem;
-    border: 1rem solid white;
-    width: fit-content;
-    padding: 1rem;
+    border: 8px solid white;
+    padding: 12px;
 
 
 }
@@ -255,22 +275,27 @@ footer img {
     align-items: center;
     justify-content: top;    
     padding: 10%;
+    height: 100%;
 }
 
 #nyheter h2 {
     text-align: center;
-    font-size: 3.4375rem;
+}
 
+#nyheter ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
 }
 
 #nyheter li {
-    font-size: 1.3125rem;
+    font-size: 1.3rem;
     font-weight: bold;
     line-height: 200%;
-
 }
 
-/* ----- ARTISTSIDA ----- */
+/* ----- PROGRAMSIDA ----- */
 #gridwrapperprogram {
     display: grid;
     background: lightblue;
@@ -294,11 +319,6 @@ footer img {
     justify-content: center;
     flex-direction: column;
     
-}
-
-.dag p {
-    font-size: 1rem;
-    width: 320px;
 }
 
 #dag_1 {
@@ -337,9 +357,66 @@ footer img {
 
 }
 
-/* ----- HITTA HIT ----- */
-#map iframe {
-    width: 100vw;
-    height: 100vh;
-
+/* ----- OMRÅDEN ----- */
+#gridwrapperomraden {
+    display: grid;
+    background-image: url(../img/gothenburg-gacb6dd552_1920.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    grid-template-columns: 1fr;
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(300px, 80vh) minmax(300px, 80vh) minmax(300px, 80vh);
+    gap: 0px;   
+    color: white;
+    grid-template-areas:
+    "hn"
+    "on"
+    "o1"
+    "o2"
+    "o3"
+    ;
 }
+
+#omraden {
+    grid-area: on;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;    
+    background-image: url(../img/aron-fjell-LxsQE9XXGm8-unsplash.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.omrade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#omrade_1 { 
+    grid-area: o1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#omrade_2 {
+    grid-area: o2;
+    background-color: rgba(32, 32, 32, 0.95);
+}
+
+#omrade_3{
+    grid-area: o3;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.omrade iframe {
+    width: 320px;
+    height: 60%;
+    
+}
+
+
+
+
