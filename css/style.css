@@ -11,7 +11,7 @@
 .headernavwrapper {
     display: grid;
     grid-area: hn;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: 1fr 1fr;
     background-color:rgb(255, 255, 255);    
     grid-template-rows: 80px 30px;
     grid-template-areas:
@@ -20,6 +20,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    height: 110px;
     z-index: 9;
 }
 
@@ -28,11 +29,13 @@
     display: flex;
     align-items: center;
     margin-left: 16px;
+    margin-bottom: 0px;
     background-color:rgb(255, 255, 255);
+    height: 105%
 }
 
-.logo {
-    height: 90%;
+header a .logo {
+    height: 75px;
     width: fit-content;
 }
 
@@ -104,10 +107,12 @@
 
 .toggle #line1 {
     transform: rotate(45deg) translate(5px, 6px);
+    background-color: white;
 }
 
 .toggle #line3 {
     transform: rotate(-45deg) translate(5px, -6px);
+    background-color: white;
 }
 
 .burger {
@@ -180,7 +185,7 @@ h3 {
 
 p {
     font-size: 1rem;
-    width: 320px;
+    width: 304px;
 }
 
 time {
@@ -196,7 +201,7 @@ time {
     background-position: center;
     background-attachment: fixed;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 85vh) minmax(200px, 30vh) minmax(200px, 30vh) minmax(300px, 80vh) 100px;
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(200px, 30vh) minmax(200px, 30vh) minmax(400px, 85vh) 100px;
     gap: 0px;   
     grid-template-areas: 
         "hn"
@@ -261,14 +266,14 @@ time {
     font-weight: bolder;
     font-size: 3.4375rem;
     border: 8px solid white;
-    padding: 12px;
+    padding: 8px;
 
 
 }
 
 #nyheter {
     grid-area: ny;
-    background-color: rgba(14, 14, 14, 0.95);
+    background-color: rgba(14, 14, 14, 0.9);
     color: white;
     display: flex;
     flex-direction: column;
@@ -290,7 +295,7 @@ time {
 }
 
 #nyheter li {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: bold;
     line-height: 200%;
 }
@@ -298,16 +303,19 @@ time {
 /* ----- PROGRAMSIDA ----- */
 #gridwrapperprogram {
     display: grid;
-    background: lightblue;
+    background-image: url(../img/vonecia-carswell-3cBFqagweZM-unsplash.jpg);
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 85vh) minmax(400px, 85vh) minmax(400px, 85vh) 100px;
+    grid-template-rows: 110px minmax(500px, 85vh) minmax(500px, 85vh) minmax(500px, 85vh) minmax(500px, 85vh) 100px;
     gap: 0px;   
     grid-template-areas: 
         "hn"
         "d1"
         "d2"
         "d3"
+        "d4"
         "fo";
     width: 100vw;
 }
@@ -323,18 +331,23 @@ time {
 
 #dag_1 {
     grid-area: d1;
-    background-color: rgb(14, 14, 14);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 #dag_2 {
     grid-area: d2;
-    background-color: darkgreen;
+    background-color: rgba(32, 32, 32, 0.95);
 }
 
 #dag_3 {
     grid-area: d3;
-    background-color: rgb(14, 14, 14);
+    background-color: rgba(0, 0, 0, 0.9);
 }
+
+#dag_4 {
+    grid-area: d4;
+    background-color: rgba(32, 32, 32, 0.95);
+    }
 
 .dag figure {
     overflow: hidden;
@@ -355,7 +368,7 @@ time {
 .dag img:hover {
     transform: scale(1.2);
 
-}
+}                                             
 
 /* ----- OMRÅDEN ----- */
 #gridwrapperomraden {
@@ -378,11 +391,19 @@ time {
 
 #omraden {
     grid-area: on;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;    
     background-image: url(../img/aron-fjell-LxsQE9XXGm8-unsplash.jpg);
+    /* SKA LÄGGAS PÅ PSEUDOELEMENT   background-image: linear-gradient(
+        rgba(0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.0) 8%,
+        rgba(0, 0, 0, 0) 90%,
+        rgba(0, 0, 0, 0.85)
+    ); 
+    */
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
