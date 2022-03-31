@@ -172,7 +172,7 @@ footer img {
 }
 
 h1 {
-    font-size: 3.23rem;
+    font-size: 3.4375rem;
 }
 
 h2 {
@@ -373,41 +373,71 @@ time {
 /* ----- OMRÅDEN ----- */
 #gridwrapperomraden {
     display: grid;
-    background-image: url(../img/gothenburg-gacb6dd552_1920.jpg);
-    background-position: center;
-    background-attachment: fixed;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 85vh) minmax(300px, 80vh) minmax(300px, 80vh) minmax(300px, 80vh);
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(1350px, 300vh);
     gap: 0px;   
     color: white;
     grid-template-areas:
     "hn"
     "on"
-    "o1"
-    "o2"
-    "o3"
+    "ob"
     ;
 }
 
 #omraden {
     grid-area: on;
-    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;    
-    background-image: url(../img/aron-fjell-LxsQE9XXGm8-unsplash.jpg);
-    /* SKA LÄGGAS PÅ PSEUDOELEMENT   background-image: linear-gradient(
+    position: relative;
+    background-image: linear-gradient(
         rgba(0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.0) 8%,
+        rgba(0, 0, 0, 0.0) 0%,
         rgba(0, 0, 0, 0) 90%,
         rgba(0, 0, 0, 0.85)
     ); 
-    */
+}
+
+#omraden::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/aron-fjell-LxsQE9XXGm8-unsplash.jpg);
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(60%);
+}
+
+#omraden h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;   
+}
+
+.omraden_lower_wrapper {
+    grid-area: ob;
+    grid-template-columns: 1fr;
+    height: 100%;
+    grid-template-rows: minmax(450px, 100vh) minmax(450px, 100vh) minmax(450px, 100vh);
+    background-image: url(../img/gothenburg-gacb6dd552_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    gap: 0px;   
+    color: white;
+    grid-template-areas:
+    "o1"
+    "o2"
+    "o3"
+    ;
 }
 
 .omrade {
@@ -420,24 +450,141 @@ time {
 #omrade_1 { 
     grid-area: o1;
     background-color: rgba(0, 0, 0, 0.9);
+    height: 33.33333%;
 }
 
 #omrade_2 {
     grid-area: o2;
     background-color: rgba(32, 32, 32, 0.95);
+    height: 33.33333%;
 }
 
-#omrade_3{
+#omrade_3 {
     grid-area: o3;
     background-color: rgba(0, 0, 0, 0.9);
+    height: 33.33333%;
 }
 
 .omrade iframe {
-    width: 320px;
-    height: 60%;
+    width: minmax(320px, 90%);
+    height: 320px;
+    padding: 16px;
     
 }
 
+/* BOENDE */ 
+#gridwrapperboende {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(1500px, 255vh);
+    width: 100%;
+    gap: 0px;   
+    color: white;
+    grid-template-areas:
+    "hn"
+    "bo"
+    "bl"
+    ;
+}
 
+#boende {
+    grid-area: bo;
+    display: flex;
+    position: relative;
+    background-image: linear-gradient(
+        rgba(0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.0) 0%,
+        rgba(0, 0, 0, 0) 90%,
+        rgba(0, 0, 0, 0.85)
+    ); 
+}
 
+#boende::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/vonecia-carswell-3cBFqagweZM-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(50%);
+}
 
+#boende h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;   
+}
+
+.boenden_lower_wrapper {
+    grid-area: bl;
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-template-rows: minmax(500px, 85vh) minmax(500px, 85vh) minmax(500px, 85vh);
+    background-image: url(../img/gothenburg-gacb6dd552_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    gap: 0px;   
+    color: white;
+    grid-template-areas:
+    "b1"
+    "b2"
+    "b3"
+    ;
+}
+
+.boende {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#camping { 
+    grid-area: o1;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 33.33333%;
+}
+
+#lyxcamping {
+    grid-area: o2;
+    background-color: rgba(32, 32, 32, 0.95);
+    height: 33.33333%;
+}
+
+#hotell {
+    grid-area: o3;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 33.33333%;
+}
+
+.boende figure {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+}
+
+.boende img{
+    overflow: hidden;
+    transition: all 0.2s;
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.boende img:hover {
+    transform: scale(1.2);
+
+}          

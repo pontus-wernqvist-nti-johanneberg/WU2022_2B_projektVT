@@ -4,42 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boendesida - GBG Festival 2022</title>
+    <title>Boende - GBG Festival 2022</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-
+    
     <div id="gridwrapperboende">
 
         <div class="headernavwrapper">
             <header>
-                <img class="logo" src="#" alt="Musikfestivalens logga">
+                <a href="index.html"><img class="logo" src="img/logo.png" alt="Musikfestivalens logga"></a>
             </header>
             
-            <nav class="site_navigation_links">
-                <ul id="nav_links">
-                    <li><a href="#">Artister</a></li>
-                    <li><a href="#">Boende</a></li>
-                    <li><a href="#">Hitta hit</a></li>
+            <nav class="upper_nav">
+                <ul class="site_navigation_links">
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="omraden.html">Områden</a></li>
                 </ul>
+
+                <div class="burger">
+                    <div id="line1"></div>
+                    <div id="line2"></div>
+                    <div id="line3"></div>
+                </div>
             </nav>
 
             <div class="dates">
-                <p>7-11 sep 2022</p>
+                <time>8 - 11 september</time>
             </div>
 
             <nav class="site_social_links">
                 <ul>
-                    <li><a href="#"><img src="#" alt="Vår Twitter"></a></li>
-                    <li><a href="#"><img src="#" alt="Vår Instagram"></a></li>
-                    <li><a href="#"><img src="#" alt="Vår Facebook"></a></li>
+                    <li><a href="#"><img src="img/Twitter-logo.svg.png" alt="Vår Twitter"></a></li>
+                    <li><a href="#"><img src="img/instagram.png" alt="Vår Instagram"></a></li>
+                    <li><a href="#"><img src="img/gmail.svg.png" alt="Vår Gmail"></a></li>
                 </ul> 
             </nav>
 
         </div>
 
+        <div id=boende>
+            <h1>Boende</h1>
+        </div>
+
+        <div class="boenden_lower_wrapper">
+            <section class="boende" id="camping">
+                <h2>TÄLTA</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                <figure><img id="camping_bild_1" src="img/dylan-sauerwein-ot8_8qJZYcw-unsplash.jpg" alt="Bild på tält från camping"></figure>
+            </section>
+
+            <section class="boende" id="lyxcamping">
+                <h2>LYXTÄLTA</h2>
+                <figure><img id="lyxcamping_bild_1" src="img/tommy-lisbin-xr-y6Ruw7K8-unsplash.jpg" alt="Bild på tält från lyxcamping"></figure>
+            </section>
+
+            <section class="boende" id="hotell">
+                <h2>HOTELL</h2>
+                <figure><img id="hotell_bild_1" src="img/linda-tate-wolfbard-lDH6pQXjZTE-unsplash (1).jpg" alt="Bild på tält från lyxcamping"></figure>
+            </section>
+        </div>
+        
     </div>
     
+    <script src="js/script.js"></script>
+
+
 </body>
 </html>
