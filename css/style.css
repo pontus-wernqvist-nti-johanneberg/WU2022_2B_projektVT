@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     max-width: 100%;    
-    font-family: 'Montserrat', sans-serif;
 }
 
 .headernavwrapper {
@@ -31,12 +30,11 @@
     margin-left: 16px;
     margin-bottom: 0px;
     background-color:rgb(255, 255, 255);
-    height: 105%
+    height: 105%;
 }
 
 header a .logo {
     height: 75px;
-    width: fit-content;
 }
 
 .dates {
@@ -146,50 +144,53 @@ header a .logo {
     width: fit-content;
 }
 
-
-footer {
-    grid-area: fo;
-    position: relative; 
-    background-color: rgb(112, 146, 190);
-}
-
-#footer_links {
-    position: absolute; 
-    left: 10px;
-    right: 10px;
-    top: 10px;
-    bottom: 10px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-
-footer img {
-    height: 80px;
-    width: 80px;
-}
-
 h1 {
     font-size: 3.4375rem;
+    font-weight: bolder;
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #00008a;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
     font-size: 3.4375rem;
+    font-family: 'Montserrat', serif;
 }
 
 h3 {
-
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Montserrat', serif;
 }
 
 p {
     font-size: 1rem;
     width: 304px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p a {
+    color: white;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;   
+}
+
+li {
+    font-family: 'Montserrat', sans-serif;   
+}
+
+.stycke {
+    padding-bottom: 1rem;
+}
+
+.last_row {
+    padding-top: 1rem;
 }
 
 time {
     font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;   
     color: white;
 }
 
@@ -197,11 +198,11 @@ time {
 /* ----- INDEX (STARTSIDA) ----- */
 #gridwrapperstartsida {
     display: grid;
-    background-image: url(../img/gothenburg-gacb6dd552_1920.jpg);
+    background-image: url(../img/lipstick.jpg);
     background-position: center;
     background-attachment: fixed;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 85vh) minmax(200px, 30vh) minmax(200px, 30vh) minmax(400px, 85vh) 100px;
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(200px, 30vh) minmax(200px, 30vh) minmax(400px, 85vh);
     gap: 0px;   
     grid-template-areas: 
         "hn"
@@ -209,13 +210,13 @@ time {
         "ut"
         "mt"
         "ny"
-        "fo";
+        ;
     width: 100vw;
 }
 
 #hpu {
     grid-area: hu;
-    background-image: url(../img/stage-concert-entertainment-rock-concert-crowd-light-1545341-pxhere.com.jpg);
+    background-image: url(../img/hpubackground.jpg);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -233,7 +234,7 @@ time {
     background-color: rgba(0, 0, 0, 0.9);
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.0) 0%,
-        rgb(17, 17, 92) 100%
+        rgba(17, 17, 92, 1) 100%
     );
     color: white;
     width: 100%;
@@ -267,6 +268,7 @@ time {
     font-size: 3.4375rem;
     border: 8px solid white;
     padding: 8px;
+    padding-top: 0px;
 
 
 }
@@ -300,24 +302,52 @@ time {
     line-height: 200%;
 }
 
+#nyheter li a {
+    color: white;
+}
+
 /* ----- PROGRAMSIDA ----- */
 #gridwrapperprogram {
     display: grid;
-    background-image: url(../img/vonecia-carswell-3cBFqagweZM-unsplash.jpg);
+    background-image: url(../img/programbackground.jpg);
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(500px, 85vh) minmax(500px, 85vh) minmax(500px, 85vh) minmax(500px, 85vh) 100px;
+    grid-template-rows: 110px  minmax(400px, 85vh) minmax(600px, 105vh) minmax(500px, 85vh) minmax(560px, 100vh) minmax(630px, 105vh);
     gap: 0px;   
     grid-template-areas: 
         "hn"
+        "pr"
         "d1"
         "d2"
         "d3"
         "d4"
-        "fo";
+        ;
     width: 100vw;
+}
+
+#program {
+    grid-area: pr;
+    display: flex;
+    position: relative;
+    background-image: linear-gradient(
+        rgba(0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.0) 0%,
+        rgba(0, 0, 0, 0) 90%,
+        rgba(0, 0, 0, 0.85)
+    ); 
+}
+
+#program h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;   
 }
 
 .dag {
@@ -326,27 +356,29 @@ time {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     
 }
 
 #dag_1 {
     grid-area: d1;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 #dag_2 {
     grid-area: d2;
-    background-color: rgba(32, 32, 32, 0.95);
+    background-color: rgba(32, 32, 32, 0.9);
 }
 
 #dag_3 {
     grid-area: d3;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 #dag_4 {
     grid-area: d4;
-    background-color: rgba(32, 32, 32, 0.95);
+    background-color: rgba(32, 32, 32, 0.9);
     }
 
 .dag figure {
@@ -374,7 +406,7 @@ time {
 #gridwrapperomraden {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 85vh) minmax(1350px, 300vh);
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(2100px, 300vh);
     gap: 0px;   
     color: white;
     grid-template-areas:
@@ -403,13 +435,13 @@ time {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../img/aron-fjell-LxsQE9XXGm8-unsplash.jpg);
+    background-image: url(../img/ullevi.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: -1;
-    filter: brightness(60%);
+    filter: brightness(70%);
 }
 
 #omraden h1 {
@@ -418,20 +450,18 @@ time {
     justify-content: center;
     align-items: center;
     width: 100%;
-    text-align: center;   
 }
 
 .omraden_lower_wrapper {
     grid-area: ob;
     grid-template-columns: 1fr;
     height: 100%;
-    grid-template-rows: minmax(450px, 100vh) minmax(450px, 100vh) minmax(450px, 100vh);
-    background-image: url(../img/gothenburg-gacb6dd552_1920.jpg);
+    background-image: url(../img/lipstickwithship.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    gap: 0px;   
+    gap: 0px;
     color: white;
     grid-template-areas:
     "o1"
@@ -447,22 +477,28 @@ time {
     justify-content: center;
 }
 
+.omrade h2 {
+    text-align: center;
+}
+
 #omrade_1 { 
     grid-area: o1;
-    background-color: rgba(0, 0, 0, 0.9);
-    height: 33.33333%;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 30%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 #omrade_2 {
     grid-area: o2;
-    background-color: rgba(32, 32, 32, 0.95);
-    height: 33.33333%;
+    background-color: rgba(32, 32, 32, 0.9);
+    height: 36%;
 }
 
 #omrade_3 {
     grid-area: o3;
-    background-color: rgba(0, 0, 0, 0.9);
-    height: 33.33333%;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 34%;
 }
 
 .omrade iframe {
@@ -476,7 +512,7 @@ time {
 #gridwrapperboende {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 85vh) minmax(1500px, 255vh);
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(1925px, 300vh);
     width: 100%;
     gap: 0px;   
     color: white;
@@ -506,13 +542,13 @@ time {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../img/vonecia-carswell-3cBFqagweZM-unsplash.jpg);
+    background-image: url(../img/bobackground2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: -1;
-    filter: brightness(50%);
+    filter: brightness(95%);
 }
 
 #boende h1 {
@@ -529,7 +565,7 @@ time {
     grid-template-columns: 1fr;
     width: 100%;
     grid-template-rows: minmax(500px, 85vh) minmax(500px, 85vh) minmax(500px, 85vh);
-    background-image: url(../img/gothenburg-gacb6dd552_1920.jpg);
+    background-image: url(../img/tram.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -548,24 +584,26 @@ time {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 #camping { 
     grid-area: o1;
-    background-color: rgba(0, 0, 0, 0.9);
-    height: 33.33333%;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 31%;
 }
 
 #lyxcamping {
     grid-area: o2;
-    background-color: rgba(32, 32, 32, 0.95);
-    height: 33.33333%;
+    background-color: rgba(32, 32, 32, 0.9);
+    height: 39.5%;
 }
 
 #hotell {
     grid-area: o3;
-    background-color: rgba(0, 0, 0, 0.9);
-    height: 33.33333%;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 29.5%;
 }
 
 .boende figure {
@@ -588,3 +626,60 @@ time {
     transform: scale(1.2);
 
 }          
+
+@media screen and (min-width: 800px)
+{
+    /* GENERELLT */
+    .site_navigation_links {
+        height: 0;
+        top: 0;
+        width: 50%;
+        transition: all 0s;
+        flex-direction: row;
+        background: none;
+    }
+
+    nav .upper_nav {
+        height: 100%;
+    }
+    
+    .upper_nav ul li {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .upper_nav ul li a { 
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+
+    .startsidalink {
+        display: none;
+    }
+
+    .upper_nav ul a {
+        color: black;
+    }
+
+    .upper_nav-active {
+        transform: translateY(0);
+    }
+
+    .burger {
+        display: none;
+    }
+
+
+
+    /* STARTSIDA */
+
+    /* PROGRAMSIDA */
+
+    /* OMRÅDESSIDA */
+
+    /* BOENDESIDA */
+
+}
