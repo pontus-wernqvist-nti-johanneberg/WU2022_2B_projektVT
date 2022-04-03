@@ -220,9 +220,8 @@ time {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;  
-
-}
+    background-size: cover; 
+} 
 
 #hpu_text {
     grid-area: ut;
@@ -281,7 +280,10 @@ time {
     flex-direction: column;
     align-items: center;
     justify-content: top;    
-    padding: 10%;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10%;
     height: 100%;
 }
 
@@ -304,6 +306,10 @@ time {
 
 #nyheter li a {
     color: white;
+}
+
+.hpl_pics {
+    display: none;
 }
 
 /* ----- PROGRAMSIDA ----- */
@@ -406,14 +412,20 @@ time {
 #gridwrapperomraden {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 85vh) minmax(2100px, 300vh);
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(630px, 90vh) minmax(756px, 108vh) minmax(714px, 102vh);
     gap: 0px;   
     color: white;
     grid-template-areas:
     "hn"
     "on"
-    "ob"
+    "o1"
+    "o2"
+    "o3"
     ;
+}
+
+.op {
+    display: none;
 }
 
 #omraden {
@@ -452,22 +464,12 @@ time {
     width: 100%;
 }
 
-.omraden_lower_wrapper {
-    grid-area: ob;
-    grid-template-columns: 1fr;
-    height: 100%;
+#omradebody {
     background-image: url(../img/lipstickwithship.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    gap: 0px;
-    color: white;
-    grid-template-areas:
-    "o1"
-    "o2"
-    "o3"
-    ;
 }
 
 .omrade {
@@ -484,7 +486,6 @@ time {
 #omrade_1 { 
     grid-area: o1;
     background-color: rgba(0, 0, 0, 0.85);
-    height: 30%;
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
@@ -492,13 +493,11 @@ time {
 #omrade_2 {
     grid-area: o2;
     background-color: rgba(32, 32, 32, 0.9);
-    height: 36%;
 }
 
 #omrade_3 {
     grid-area: o3;
     background-color: rgba(0, 0, 0, 0.85);
-    height: 34%;
 }
 
 .omrade iframe {
@@ -512,15 +511,25 @@ time {
 #gridwrapperboende {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 85vh) minmax(1925px, 300vh);
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(597px, 93vh) minmax(760px, 119vh) minmax(606px, 95vh);
     width: 100%;
     gap: 0px;   
     color: white;
     grid-template-areas:
     "hn"
     "bo"
-    "bl"
+    "b1"
+    "b2"
+    "b3"
     ;
+}
+
+#boendebody {
+    background-image: url(../img/tram.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #boende {
@@ -560,26 +569,8 @@ time {
     text-align: center;   
 }
 
-.boenden_lower_wrapper {
-    grid-area: bl;
-    grid-template-columns: 1fr;
-    width: 100%;
-    grid-template-rows: minmax(500px, 85vh) minmax(500px, 85vh) minmax(500px, 85vh);
-    background-image: url(../img/tram.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    gap: 0px;   
-    color: white;
-    grid-template-areas:
-    "b1"
-    "b2"
-    "b3"
-    ;
-}
 
-.boende {
+.boendeform {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -589,24 +580,24 @@ time {
 }
 
 #camping { 
-    grid-area: o1;
+    grid-area: b1;
     background-color: rgba(0, 0, 0, 0.85);
-    height: 31%;
 }
 
 #lyxcamping {
-    grid-area: o2;
+    grid-area: b2;
     background-color: rgba(32, 32, 32, 0.9);
-    height: 39.5%;
 }
 
+#lyxcampingpics {
+   display: none; 
+}
 #hotell {
-    grid-area: o3;
+    grid-area: b3;
     background-color: rgba(0, 0, 0, 0.85);
-    height: 29.5%;
 }
 
-.boende figure {
+.boendeform figure {
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -614,15 +605,14 @@ time {
     height: 300px;
 }
 
-.boende img{
+.boendeform img{
     overflow: hidden;
     transition: all 0.2s;
     height: fit-content;
     width: fit-content;
-
 }
 
-.boende img:hover {
+.boendeform img:hover {
     transform: scale(1.2);
 
 }          
@@ -630,31 +620,36 @@ time {
 @media screen and (min-width: 800px)
 {
     /* GENERELLT */
+
+    h1 {
+        font-size: 3.75rem;
+        }
+
+        .upper_nav ul li a { 
+            font-size: 2rem;
+            font-weight: bolder;
+        }
+
     .site_navigation_links {
         height: 0;
         top: 0;
-        width: 50%;
+        width: 70%;
         transition: all 0s;
         flex-direction: row;
         background: none;
-    }
 
-    nav .upper_nav {
-        height: 100%;
     }
     
+    .upper_nav ul {
+        justify-content: space-evenly;
+
+    }
+
     .upper_nav ul li {
         height: 100%;
-        width: 100%;
-        justify-content: center;
-
+        margin-top: 50px;
+        padding-bottom: 0; 
     }
-
-    .upper_nav ul li a { 
-        font-size: 2rem;
-        font-weight: bolder;
-    }
-
 
     .startsidalink {
         display: none;
@@ -674,12 +669,198 @@ time {
 
 
 
-    /* STARTSIDA */
+    /* INDEX (STARTSIDA) */
+    #gridwrapperstartsida {
+        grid-template-columns: 1fr 401px 1fr;
+        grid-template-areas: 
+            "hn hn hn"
+            "hu hu hu"
+            "ut ut ut"
+            "mt mt mt"
+            "l1 ny l2"
+            ;
+    }
+
+    .hpl_pics {
+        background-color: rgba(14, 14, 14, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    #hpl_pics1 {
+        grid-area: l1;
+    }
+
+    #hpl_pics2 {
+        grid-area: l2;
+
+    }
+
+    #nyheter {
+        padding: 0;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #hpl_pic1 {
+        width: 22vw;
+    }
+
+    #hpl_pic2 {
+        width: 20vw;
+    }
+
+    #hpl_pic3 {
+        width: 23vw;
+    }
 
     /* PROGRAMSIDA */
+    #gridwrapperprogram {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 110px minmax(400px, 85vh) minmax(600px, 105vh) minmax(630px, 105vh);
+        grid-template-areas: 
+            "hn hn"
+            "pr pr"
+            "d1 d2"
+            "d3 d4"
+            ;
+    }
+
+    .dag {
+        justify-content: flex-start;
+        padding-top: 3rem;
+    }
+
+    #dag_1 {
+        display: flex;
+    }
+
+    #dag_2 {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    #dag_4 {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
 
     /* OMRÅDESSIDA */
+    #gridwrapperomraden {
+        display: grid;
+        grid-template-columns: 2fr 1.5fr;
+        grid-template-areas:
+        "hn hn"
+        "on on"
+        "o1 p1"
+        "o2 p2"
+        "o3 p3"
+        ;
+    }
+
+    .op {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        justify-content: space-between;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .op figure {
+        width: 60%;
+    }
+
+    #op1 {
+        grid-area: p1;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    #op2 {
+        grid-area: p2;
+        background-color: rgba(32, 32, 32, 0.9);
+    }
+
+    #op3 {
+        grid-area: p3;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    #omrade_pic1 {
+        width: 64%;
+    }
+
+    #omrade_pic2 {
+        width: 68%;
+    }
+
+    #omrade_pic3 {
+        width: 58%;
+    }
+
+    #omrade_pic4 {
+        width: 63%;
+    }
+
+    #omrade_pic5 {
+        width: 77%;
+    }
+
+    #omrade_pic6 {
+        width: 80%;
+    }
 
     /* BOENDESIDA */
 
+    #gridwrapperboende {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 110px minmax(400px, 85vh) minmax(606px, 95vh) minmax(490px, 80vh);
+        grid-template-areas:
+        "hn hn"
+        "bo bo"
+        "b1 b3"
+        "b2 xp"
+        ;
+    }
+
+    #lyxcamping {
+        background: rgba(0, 0, 0, 0.85);
+        justify-content: flex-start; 
+
+    }
+
+    #lyxcamping figure {
+        display: none;
+    }
+
+    #lyxcampingpics {
+        grid-area: xp;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #lyxcampingpics figure {
+        overflow: hidden;
+        width: 42%;
+    }
+
+    #lyxcampingpics img {
+        overflow: hidden;
+        transition: all 0.2s;
+        height: fit-content;
+        width: fit-content;
+    }
+      
+    #lyxcampingpics img:hover {
+        transform: scale(1.2);
+    }
+    
 }
