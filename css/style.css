@@ -1,5 +1,8 @@
 /* ----- SAMMA ÖVERALLT ----- */
 
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+
 * {
     padding: 0;
     margin: 0;
@@ -62,6 +65,7 @@ header a .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     position: absolute;
     top: -100vh;
@@ -78,15 +82,17 @@ header a .logo {
 
 .upper_nav li {
     list-style: none;
-    margin-top: 15vh;
-    padding-bottom: 5vh;    
+    display: flex;
+    height: 100%;
+    padding-top: 10%;
+    justify-content: space-evenly;
 }
 
 .upper_nav a {
     text-decoration: none;
     letter-spacing: 0.1875rem;  
     color: white;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 3.125rem;    
 }
 
@@ -194,6 +200,11 @@ time {
     color: white;
 }
 
+.upper_nav li a {
+    font-family: 'Bungee Inline', cursive;
+}
+
+
 
 /* ----- INDEX (STARTSIDA) ----- */
 #gridwrapperstartsida {
@@ -279,7 +290,6 @@ time {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: top;    
     padding-top: 10%;
     padding-left: 5%;
     padding-right: 5%;
@@ -501,7 +511,7 @@ time {
 }
 
 .omrade iframe {
-    width: minmax(320px, 90%);
+    width: 90%;
     height: 320px;
     padding: 16px;
     
@@ -647,7 +657,7 @@ time {
 
     .upper_nav ul li {
         height: 100%;
-        margin-top: 50px;
+        padding-top: 0;
         padding-bottom: 0; 
     }
 
