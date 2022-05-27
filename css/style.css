@@ -163,9 +163,10 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     color: white;
     font-family: 'Montserrat', serif;
+    text-align: center;
 }
 
 p {
@@ -521,8 +522,8 @@ time {
 #gridwrapperboende {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px minmax(400px, 85vh) minmax(597px, 93vh) minmax(760px, 119vh) minmax(606px, 95vh);
-    width: 100%;
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(895px, 100vh) minmax(760px, 119vh) minmax(950px, 100vh);
+    width: 100%;    
     gap: 0px;   
     color: white;
     grid-template-areas:
@@ -607,6 +608,15 @@ time {
     background-color: rgba(0, 0, 0, 0.85);
 }
 
+.boendelista_rubrik {
+    padding-top: 1rem;
+}
+
+.boendelista li a {
+    color: white;
+}
+
+
 .boendeform figure {
     overflow: hidden;
     display: flex;
@@ -619,8 +629,7 @@ time {
     overflow: hidden;
     transition: all 0.2s;
     height: fit-content;
-    width: fit-content;
-}
+    }
 
 .boendeform img:hover {
     transform: scale(1.2);
@@ -830,7 +839,7 @@ time {
 
     #gridwrapperboende {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 110px minmax(400px, 85vh) minmax(606px, 95vh) minmax(490px, 80vh);
+        grid-template-rows: 110px minmax(400px, 85vh) minmax(950px, 110vh) minmax(490px, 80vh);
         grid-template-areas:
         "hn hn"
         "bo bo"
