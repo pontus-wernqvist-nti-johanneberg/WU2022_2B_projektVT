@@ -333,7 +333,7 @@ time {
     background-size: cover;
     color: white;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px  minmax(400px, 85vh) minmax(600px, 105vh) minmax(500px, 85vh) minmax(560px, 100vh) minmax(630px, 105vh);
+    grid-template-rows: 110px minmax(400px, 85vh) minmax(1130px, 105vh) minmax(1050px, 85vh) minmax(970px, 100vh) minmax(1000px, 105vh);
     gap: 0px;   
     grid-template-areas: 
         "hn"
@@ -367,6 +367,14 @@ time {
     text-align: center;   
 }
 
+.programlista_rubrik {
+    padding-top: 1rem;
+}
+
+.programlista {
+    padding-bottom: 1rem;
+}
+
 .dag {
     position: relative;
     display: flex;
@@ -381,6 +389,13 @@ time {
 #dag_1 {
     grid-area: d1;
     background-color: rgba(0, 0, 0, 0.85);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;   
 }
 
 #dag_2 {
@@ -406,6 +421,13 @@ time {
     height: 300px;
 }
 
+#programfigure5 {
+    height: 220px;  
+}
+
+#programfigure6{
+    height: 180px;
+}
 .dag img{
     overflow: hidden;
     transition: all 0.2s;
@@ -743,7 +765,7 @@ time {
     /* PROGRAMSIDA */
     #gridwrapperprogram {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 110px minmax(400px, 85vh) minmax(600px, 105vh) minmax(630px, 105vh);
+        grid-template-rows: 110px minmax(400px, 85vh) minmax(1130px, 105vh) minmax(990px, 105vh);
         grid-template-areas: 
             "hn hn"
             "pr pr"
@@ -761,8 +783,17 @@ time {
         display: flex;
     }
 
+    #rockdag2lista {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
     #dag_2 {
         background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    #maindag3lista {
+        padding-bottom: 0px;
     }
 
     #dag_4 {
@@ -786,7 +817,7 @@ time {
     .op {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; 
+        align-items: center; 
         justify-content: space-between;
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -880,6 +911,25 @@ time {
       
     #lyxcampingpics img:hover {
         transform: scale(1.2);
+    }   
+}
+
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        #gridwrapperstartsida {
+            background-attachment: scroll;
+        }
+
+        #gridwrapperprogram {
+            background-attachment: scroll;
+        }
+
+        #gridwrapperboende {
+            background-attachment: scroll;
+        }
+
+        #gridwrapperomraden {
+            background-attachment: scroll;
+        }
     }
-    
 }
